@@ -44,3 +44,51 @@ STUDENTS(id, first_name, last_name, date_of_birth, city, address)
 ATTENDANCE(id, student_id, course_id, attendance_date) 
 
 ANSWERS(id, number_of_question, answer)
+
+
+//CREACION DE TABLAS
+
+CREATE TABLE ANGEL120892.COURSES (
+  ID INT NOT NULL, 
+ NAME VARCHAR2(255) NOT NULL,
+ CODE VARCHAR2(255) NOT NULL,
+ START_DATE DATE NOT NULL,
+ END_DATE DATE NOT NULL 
+);
+
+SELECT * FROM ANGEL120892.COURSES;
+
+CREATE TABLE ANGEL120892.STUDENTS (
+ID INT NOT NULL, 
+first_name VARCHAR2(255) NOT NULL,
+last_name VARCHAR2(255) NOT NULL,
+date_of_birth VARCHAR (255) NOT NULL,
+city VARCHAR2 (255) NOT NULL,
+address VARCHAR2 (255) NOT NULL
+);
+
+CONNECT  ANGEL120892;
+
+SELECT * FROM ANGEL120892.STUDENTS;
+
+drop table ANGEL120892.COURSES;
+
+select * from all_tables;
+
+CREATE TABLE ANGEL120892.ATTENDACE (
+ID INT NOT NULL, 
+student_id INT NOT NULL,
+course_id INT NOT NULL,
+attendance_date date NOT NULL
+);
+
+select * from ANGEL120892.ATTENDACE;
+
+
+CREATE TABLE ANGEL120892.ANSWERS (
+ID INT NOT NULL, 
+number_of_question INT NOT NULL,
+answer INT NOT NULL
+);
+
+select * from ANGEL120892.ANSWERS;
